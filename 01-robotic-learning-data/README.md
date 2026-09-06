@@ -3,7 +3,7 @@
 This folder contains everything required to complete the laboratory work:
 
 ```text
-student-release/
+01-robotic-learning-data/
 ├── README.md
 ├── seminar_01_data_and_actions.ipynb
 └── data/
