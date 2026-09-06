@@ -1,0 +1,8 @@
+{
+  "source": "synthetic_episodes.npz",
+  "observation.state": "five joint angles (rad), world EE XYZ (m), jaw angle (rad)",
+  "action": "next-frame absolute five joint angles and jaw angle (rad); state-derived teaching target, not recorded actuator command",
+  "action_valid": "false at each episode final frame; zero padding must be masked in a training loss",
+  "images": "lossless PNG bytes embedded in Parquet; no MP4 needed",
+  "normalization": "meta/stats.json describes all episodes; exercises fit train-only statistics"
+}
