@@ -31,7 +31,12 @@ ADVERSARIAL_CENTER_PROB = 0.20
 def locate_asset_dir(start: Path | None = None) -> Path:
     """Find the seminar asset directory from common notebook working folders."""
     start = (start or Path.cwd()).resolve()
-    roots = (start, *start.parents)
+    module_dir = Path(__file__).resolve().parent
+    # Colab executes an opened notebook from /content even when seminar_il.py
+    # lives in /content/multimodal-vla-course/02-imitation-learning/notebooks.
+    # Search relative to both locations so importing the module does not depend
+    # on the process working directory.
+    roots = tuple(dict.fromkeys((start, *start.parents, module_dir, *module_dir.parents)))
     relatives = (
         Path("assets/so101_gym"),
         Path("02-imitation-learning/assets/so101_gym"),

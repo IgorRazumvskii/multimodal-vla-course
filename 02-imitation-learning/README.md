@@ -26,6 +26,11 @@ TODOs for Behavior Cloning and DAgger and the optional goal-conditioned task.
 5. Continue with **Runtime → Run all**, or execute the cells sequentially while
    completing the student TODOs.
 
+If a previous Colab attempt left an incomplete `/content/multimodal-vla-course`
+checkout, rerun the two setup cells. The notebook updates an existing Git
+checkout and prints the exact module path it imports.
+If that path exists but is not a Git checkout, remove or rename it first.
+
 PyTorch is supplied by the Colab GPU runtime and is deliberately not reinstalled.
 The remaining packages installed by the notebook are:
 
